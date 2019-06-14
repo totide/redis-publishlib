@@ -12,9 +12,9 @@
 3. 修改目录下的 conf.py文件，修改redis连接地址
 4. 代码中加入以下两行代码，就可以使用订阅消息、定时器消息
 
-  from redis_publishlib import parse_response
+           from redis_publishlib import parse_response
   
-  parse_response()
+           parse_response()
 
 5. 以后需要增加协议，就可以在action.py中像 exec_timer方法一样，添加
 6. 例子: 
