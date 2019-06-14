@@ -2,8 +2,8 @@
 基于redis自身特性实现定时消息与订阅消息
 
 
-修改redis配置文件 /etc/redis.conf，去掉以下语句的注释，保存并退出
-notify-keyspace-events Ex
+修改redis配置文件 /etc/redis.conf，去掉“notify-keyspace-events Ex”语句的注释，保存并退出
+
 
 
 
