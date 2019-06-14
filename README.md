@@ -24,6 +24,7 @@ notify-keyspace-events Ex
    msg_info = {"special": "1", "class": "", "func": "exec_timer", "args": [],
                "kwargs": {"callback": "destroy_cross_server_data"}, "unique": True,
                "accepters": []}
+
    week = int(time.strftime("%w"))
    zero_timestamp = time.mktime(date.today().timetuple())
    effect_timestamp = zero_timestamp + (7 - week + 1) * 86400 + 4 * 3600 + 10 * 60
@@ -33,6 +34,7 @@ notify-keyspace-events Ex
 
    msg_info = {"special": "1", "class": "", "func": "delete_items", "args": [角色ID, [[道具ID, 道具数量]]],
                "kwargs": {}}
+
    msg_id = redis_helper.save_msg(msg_info)
    redis_helper.publish(msg_id, channel="%s_%s" % ("", game_id))
    
